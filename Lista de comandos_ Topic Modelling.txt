@@ -1,0 +1,12 @@
+Lista de comandos_ Topic Modelling de CORSMAXIX
+
+C:\Users\[nombre de la carpeta]>cd C:\Mallet
+
+C:\Mallet>bin\mallet
+
+C:\Mallet>bin\mallet import-dir
+
+C:\Mallet>bin\mallet import-dir --input sample-data\[nombre la carpeta donde está descargada CORMAXIX_lemm] --output _CORSMAXIX_lemmmatized.mallet --keep-sequence --remove-stopwords --stoplist-file C:\[nombre del archivo de stop words. txt]
+
+C:\Mallet>bin\mallet train-topics  --input _CORSMAXIX_lemmmatized.mallet --num-topics [número de tópicos] --output-topic-keys topic-articles_lemmatized_key.txt --output-doc-topics topic-articles_lemmatized_compostion.txt
+C:\Mallet>bin\mallet train-topics  --input CORSMAXIX_lemmmatized.mallet --num-topics 9 --num-top-words [número de palabras por tópico] --output-topic-keys topic-articles_lemmatized_key.txt --output-doc-topics topic-articles_lemmatized_compostion.txt
